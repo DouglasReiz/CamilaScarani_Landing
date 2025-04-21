@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link para o CSS que te passei -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
@@ -19,7 +20,12 @@
   <!-- Cabeçalho -->
   <header id="site-header">
     <div class="logo">MinhaMarca</div>
-    <nav>
+
+    <!-- Botão do menu para telas pequenas -->
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <!-- Menu de navegação -->
+    <nav class="nav-menu">
       <a href="#cursos">Cursos</a>
       <a href="#sobre">Sobre</a>
       <a href="#depoimentos">Depoimentos</a>
@@ -83,6 +89,8 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const header = document.getElementById('site-header');
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-menu');
 
     window.addEventListener('scroll', function () {
       if (window.scrollY > 10) {
@@ -91,15 +99,11 @@
         header.classList.remove('scrolled');
       }
     });
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
   });
-
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.dropdown-menu');
-
-  toggle.addEventListener('click', () => {
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  });
-
 </script>
 
 </html>

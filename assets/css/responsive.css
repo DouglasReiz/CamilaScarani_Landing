@@ -1,0 +1,106 @@
+/* Estilos responsivos */
+
+/* Telas até 768px (celular) */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+    header .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .hero .container {
+        padding-top: 10rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .course-card {
+        padding: 15px;
+    }
+}
+
+/* Telas até 1200px (tablet e notebooks médios) */
+@media (max-width: 1200px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--branco);
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    form {
+        max-width: 90%;
+    }
+}
+
+/* Telas até 2000px (monitores grandes) */
+@media (min-width: 1400px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero .container {
+        padding-top: 25rem;
+    }
+
+    section {
+        max-width: 1400px;
+    }
+
+    form {
+        max-width: 700px;
+    }
+
+    .course-card {
+        font-size: 1.1rem;
+        padding: 30px;
+    }
+}
