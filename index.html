@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camila Scarani</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css"> <!-- Link para o CSS que te passei -->
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header id="site-header">
+    <div class="logo">MinhaMarca</div>
+    <nav>
+      <a href="#cursos">Cursos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Descubra sua melhor versão</h1>
+      <button>Ver Cursos</button>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>Texto de apresentação da profissional, sua trajetória e conquistas.</p>
+  </section>
+
+  <!-- Cursos -->
+  <section id="cursos">
+    <h2>Nossos Cursos</h2>
+    <div class="course-card">
+      <h3>Curso de Maquiagem Profissional</h3>
+      <p>Descrição curta do curso.</p>
+    </div>
+    <div class="course-card">
+      <h3>Auto Maquiagem</h3>
+      <p>Descrição curta do curso.</p>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos">
+    <h2>O que dizem nossos alunos</h2>
+    <blockquote>
+      <p>"O curso mudou minha carreira! Professora maravilhosa."</p>
+      <footer>— Aluna satisfeita</footer>
+    </blockquote>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Entre em Contato</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea placeholder="Sua mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.getElementById('site-header');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  });
+
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.dropdown-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+</script>
+
+</html>
