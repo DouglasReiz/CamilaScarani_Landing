@@ -98,6 +98,23 @@
     font-size: 0.95rem;
 }
 
+.contato-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .contato-links p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .contato-links a {
+    display: inline-flex;
+    margin: 8px 6px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
 /* Telas até 1200px (tablet e notebooks médios) */
 @media (max-width: 1200px) {
     .menu-toggle {
@@ -155,6 +172,62 @@
     form {
         max-width: 700px;
     }
+
+    @media screen and (min-width: 1400px) {
+        /* FAQ */
+        #faq {
+          padding: 60px 80px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+      
+        #faq h2 {
+          font-size: 2.2rem;
+        }
+      
+        #faq summary {
+          font-size: 1.2rem;
+        }
+      
+        #faq p {
+          font-size: 1.05rem;
+        }
+      
+        /* Sobre */
+        #sobre {
+          padding: 60px 80px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+      
+        #sobre h2 {
+          font-size: 2.2rem;
+        }
+      
+        #sobre p {
+          font-size: 1.3rem;
+        }
+      
+        #sobre img {
+          height: 340px;
+        }
+      
+        /* Contato */
+        .contato-links {
+          margin-top: 30px;
+        }
+      
+        .contato-links a {
+          font-size: 1.1rem;
+          padding: 12px 24px;
+          margin: 8px 16px;
+        }
+      
+        .contato-links p {
+          font-size: 1.1rem;
+        }
+      }
+      
 
     .course-card {
         font-size: 1.1rem;
