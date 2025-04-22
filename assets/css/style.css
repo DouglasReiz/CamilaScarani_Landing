@@ -107,7 +107,7 @@ section {
   margin: 0 auto;
 }
 
-section .profile-card{
+section .profile-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,20 +119,22 @@ section .profile-card{
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+
 #sobre h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  font-family: 'Cinzel';
 }
 
 #sobre p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.8;
-  font-family: 'Cinzel';
-  font-weight: 600;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
 }
 
-section .profile-card p span{
-  color: var(--verde);
+section .profile-card p span {
+  color: var(--dourado);
 }
 
 #sobre img {
@@ -211,52 +213,8 @@ section .profile-card p span{
 
 /* Contato */
 
-#contato h2{
+#contato h2 {
   margin-bottom: 1rem;
-}
-
-form {
-  background-color: var(--branco);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  background-color: #f9f9f9;
-  transition: border-color 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-  border-color: #bec8b2;
-  outline: none;
-}
-
-form button {
-  background-color: #bec8b2;
-  color: #fff;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #aab59e;
 }
 
 .contato-links {
@@ -296,7 +254,7 @@ form button:hover {
   color: white;
 }
 
-.contato-links .whatsapp img{
+.contato-links .whatsapp img {
   width: 30px;
   margin-right: 20px;
 }
