@@ -9,6 +9,7 @@
         justify-content: space-between;
         padding: 20px 40px;
     }
+
     header .menu-toggle {
         display: flex;
     }
@@ -24,6 +25,10 @@
         margin: 10px 0;
     }
 
+    .hero{
+        background: url(../img/Responsive-back.jpg);
+    }
+
     .hero .container {
         padding-top: 10rem;
     }
@@ -36,9 +41,61 @@
         padding: 20px;
     }
 
-    .course-card {
-        padding: 15px;
+    section .profile-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    #sobre {
+        padding: 30px 20px;
+    }
+
+    #sobre h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #sobre p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    #sobre img {
+        margin: 20px auto;
+        height: 300px;
+        width: auto;
+        max-height: 280px;
+    }
+}
+
+.course-card {
+    padding: 15px;
+}
+
+#faq {
+    padding: 30px 16px;
+}
+
+#faq h2 {
+    font-size: 1.75rem;
+}
+
+#faq details {
+    padding: 16px;
+}
+
+#faq summary {
+    font-size: 1rem;
+    padding-right: 16px;
+}
+
+#faq summary::after {
+    font-size: 1rem;
+}
+
+#faq p {
+    font-size: 0.95rem;
 }
 
 /* Telas até 1200px (tablet e notebooks médios) */
