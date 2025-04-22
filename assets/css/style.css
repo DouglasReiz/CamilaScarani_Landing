@@ -209,7 +209,11 @@ section .profile-card p span{
   font-size: 1rem;
 }
 
+/* Contato */
 
+#contato h2{
+  margin-bottom: 1rem;
+}
 
 form {
   background-color: var(--branco);
@@ -253,6 +257,68 @@ form button {
 
 form button:hover {
   background-color: #aab59e;
+}
+
+.contato-links {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.contato-links p {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.contato-links a {
+  display: inline-flex;
+  align-items: center;
+  margin: 6px 12px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contato-links .whatsapp {
+  border: solid;
+  border-color: #25D366;
+  color: #25D366;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 170px;
+}
+
+.contato-links .whatsapp:hover {
+  border-color: #1ebe5d;
+  background-color: #1ebe5d;
+  color: white;
+}
+
+.contato-links .whatsapp img{
+  width: 30px;
+  margin-right: 10px;
+}
+
+.contato-links .instagram {
+  border: solid;
+  border-color: #e1306c;
+  color: #e1306c;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 170px;
+}
+
+.contato-links .instagram:hover {
+  border-color: #c72b60;
+  background-color: #c72b60;
+  color: white;
+}
+
+.contato-links .instagram img {
+  width: 30px;
+  margin-right: 10px;
 }
 
 /* Rodapé */
