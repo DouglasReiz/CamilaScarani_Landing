@@ -21,6 +21,10 @@
       max-height: 220px; /* Ajuste para celulares */
       font-size: 0.9rem; /* Reduzindo o tamanho da fonte em telas menores */
     }
+
+    #faq {
+        max-width: 90%;
+    }
   }
 
 
