@@ -1,6 +1,7 @@
 /* Paleta de cores inspirada no site */
 :root {
   --verde: #bec8b2;
+  --verde-web: #203b00;
   --preto: #44493e;
   --cinza-claro: #f9f9f9;
   --branco: #ffffff;
@@ -52,8 +53,9 @@ header {
 
 
 #site-header.scrolled {
-  background-color: var(--verde);
+  background-color: var(--verde-web);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: var(--cinza-claro);
 }
 
 .menu-toggle {
@@ -67,8 +69,16 @@ header {
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: var(--preto);
+  color: var(--verde);
   font-weight: 500;
+}
+
+nav a:hover{
+  color: var(--branco);
+}
+
+.menu-toggle .hidden {
+  display: none;
 }
 
 /* Hero Section */
@@ -143,7 +153,7 @@ section .profile-card {
 #sobre p {
   font-size: 1.4rem;
   line-height: 1.8;
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 

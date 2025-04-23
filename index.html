@@ -41,7 +41,7 @@
   <section class="hero">
     <div class="container">
       <h1>Descubra sua melhor versão</h1>
-      <button ><a href="#cursos">Ver Consultorias</a></button>
+      <button><a href="#cursos">Ver Consultorias</a></button>
     </div>
   </section>
 
@@ -245,7 +245,7 @@
       const toggle = document.querySelector('.menu-toggle');
       const menu = document.querySelector('.nav-menu');
       const btns = document.querySelectorAll(".toggle-btn");
-  
+
       window.addEventListener('scroll', function () {
         if (window.scrollY > 10) {
           header.classList.add('scrolled');
@@ -253,11 +253,17 @@
           header.classList.remove('scrolled');
         }
       });
-  
-      toggle.addEventListener('click', () => {
+
+      toggle.addEventListener('click', (e) => {
         menu.classList.toggle('show');
+        e.stopPropagation();
       });
-  
+
+
+      document.addEventListener('click', function () {
+        menu.classList.remove('show');
+      });
+
       btns.forEach(btn => {
         btn.addEventListener("click", function () {
           const content = this.closest(".course-card").querySelector(".conteudo-completo");
@@ -265,7 +271,7 @@
           this.textContent = content.style.display === "block" ? "Ler menos" : "Leia mais";
         });
       });
-  
+
     });
   </script>
 </body>

@@ -2,30 +2,61 @@
 
 
 @media screen and (max-width: 480px) {
-    .container-course .course-card {
+    .logo {
+        max-width: 30%;
+    }
+
+    header .menu-toggle {
         display: block;
-        padding: 0 10px; /* Adicionando padding para celulares */
-        width: 100%; /* Ajustando a largura para ocupar 100% da tela */
-        max-width: 100%; /* Garantindo que não exceda a largura da tela */
+    }
+
+    header .menu-toggle .hidden {
+        display: none;
+    }
+
+    #site-header.scrolled {
+        background-color: var(--verde);
+    }
+
+
+    .hero button {
+        background-color: var(--verde);
+    }
+
+
+
+    .container-course .course-card {
+        background-color: var(--verde);
+        display: block;
+        padding: 0 10px;
+        /* Adicionando padding para celulares */
+        width: 100%;
+        /* Ajustando a largura para ocupar 100% da tela */
+        max-width: 100%;
+        /* Garantindo que não exceda a largura da tela */
     }
 
     .container-course .course-card .course-img img {
         border-radius: 12px;
         margin-top: 20px;
-        max-width: 90%; /* Garantindo que a imagem não exceda a largura do cartão */
-        height: auto; /* Mantendo a proporção da imagem */
+        max-width: 90%;
+        /* Garantindo que a imagem não exceda a largura do cartão */
+        height: auto;
+        /* Mantendo a proporção da imagem */
 
     }
 
     .conteudo-completo {
-      max-height: 220px; /* Ajuste para celulares */
-      font-size: 0.9rem; /* Reduzindo o tamanho da fonte em telas menores */
+        max-height: 220px;
+        /* Ajuste para celulares */
+        font-size: 0.9rem;
+        /* Reduzindo o tamanho da fonte em telas menores */
     }
 
     #faq {
         max-width: 90%;
     }
-  }
+}
 
 
 /* Telas até 768px (celular) */
@@ -39,7 +70,7 @@
     }
 
     header .menu-toggle {
-        display: flex;
+        display: block;
     }
 
     nav {
@@ -97,11 +128,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: auto;          
-        padding: 0;          
+        width: auto;
+        padding: 0;
     }
 
-    .container-course .course-card{
+    .container-course .course-card {
         padding: 30px;
     }
 
@@ -116,6 +147,7 @@
         font-size: 1.5rem;
         text-align: center;
     }
+
     #faq {
         padding: 30px 16px;
     }
