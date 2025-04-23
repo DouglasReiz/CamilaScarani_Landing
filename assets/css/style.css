@@ -109,6 +109,11 @@ nav a {
   cursor: pointer;
 }
 
+.hero button a{
+  text-decoration: none;
+  color: var(--branco);
+}
+
 /* Seções */
 section {
   padding: 60px 20px;
