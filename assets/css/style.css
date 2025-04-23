@@ -41,6 +41,15 @@ header {
   box-shadow: none;
 }
 
+.logo{
+  max-width: 8%;
+}
+
+.logo img{
+  width: auto;
+  border-radius: 2rem;
+}
+
 
 #site-header.scrolled {
   background-color: var(--verde);
@@ -191,7 +200,7 @@ section .profile-card p span {
   line-height: 1.6;
 }
 
-.toggle-btn {
+.container-course .course-card .toggle-btn {
   background: none;
   border: none;
   color: var(--branco);
@@ -200,7 +209,7 @@ section .profile-card p span {
   margin-left: 6px;
 }
 
-.conteudo-completo {
+.container-course .course-card .conteudo-completo {
   display: none;
   margin-top: 12px;
   font-size: 1rem;
@@ -212,21 +221,21 @@ section .profile-card p span {
   overflow-y: auto;  /* Scroll vertical */
 }
 
-.conteudo-completo span{
+.container-course .course-card .conteudo-completo span{
   font-weight: 700;
 }
 
 /* Estilo da barra de rolagem */
-.conteudo-completo::-webkit-scrollbar {
+.container-course .course-card .conteudo-completo::-webkit-scrollbar {
   width: 8px;
 }
 
-.conteudo-completo::-webkit-scrollbar-track {
+.container-course .course-card .conteudo-completo::-webkit-scrollbar-track {
   background: var(--verde);
   border-radius: 8px;
 }
 
-.conteudo-completo::-webkit-scrollbar-thumb {
+.container-course .course-card .conteudo-completo::-webkit-scrollbar-thumb {
   background-color: var(--cinza-claro);
   border-radius: 8px;
   border: 2px solid var(--preto);
@@ -291,8 +300,16 @@ section .profile-card p span {
 
 /* Contato */
 
+#contato{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #contato h2 {
   margin-bottom: 1rem;
+
 }
 
 .contato-links {
@@ -307,7 +324,7 @@ section .profile-card p span {
 }
 
 .contato-links a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin: 6px 12px;
   padding: 10px 18px;
