@@ -111,7 +111,7 @@ nav a:hover{
 
 .hero button {
   padding: 12px 24px;
-  background-color: var(--verde);
+  background-color: var(--verde-web);
   color: var(--branco);
   border: none;
   border-radius: 6px;
