@@ -1,5 +1,29 @@
 /* Estilos responsivos */
 
+
+@media screen and (max-width: 480px) {
+    .container-course .course-card {
+        display: block;
+        padding: 0 10px; /* Adicionando padding para celulares */
+        width: 100%; /* Ajustando a largura para ocupar 100% da tela */
+        max-width: 100%; /* Garantindo que não exceda a largura da tela */
+    }
+
+    .container-course .course-card .course-img img {
+        border-radius: 12px;
+        margin-top: 20px;
+        max-width: 90%; /* Garantindo que a imagem não exceda a largura do cartão */
+        height: auto; /* Mantendo a proporção da imagem */
+
+    }
+
+    .conteudo-completo {
+      max-height: 220px; /* Ajuste para celulares */
+      font-size: 0.9rem; /* Reduzindo o tamanho da fonte em telas menores */
+    }
+  }
+
+
 /* Telas até 768px (celular) */
 @media (max-width: 768px) {
     header {
@@ -25,7 +49,7 @@
         margin: 10px 0;
     }
 
-    .hero{
+    .hero {
         background: url(../img/Responsive-back.jpg);
     }
 
@@ -35,10 +59,6 @@
 
     .hero h1 {
         font-size: 2rem;
-    }
-
-    form {
-        padding: 20px;
     }
 
     section .profile-card {
@@ -67,53 +87,74 @@
         width: auto;
         max-height: 280px;
     }
+
+    .container-course {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;          
+        padding: 0;          
+    }
+
+    .container-course .course-card{
+        padding: 30px;
+    }
+
+    .container-course .course-card .course-img img {
+        border-radius: 12px;
+        margin-top: 20px;
+        max-width: auto;
+        height: auto;
+    }
+
+    .container-course .course-card h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #faq {
+        padding: 30px 16px;
+    }
+
+    #faq h2 {
+        font-size: 1.75rem;
+    }
+
+    #faq details {
+        padding: 16px;
+    }
+
+    #faq summary {
+        font-size: 1rem;
+        padding-right: 16px;
+    }
+
+    #faq summary::after {
+        font-size: 1rem;
+    }
+
+    #faq p {
+        font-size: 0.95rem;
+    }
+
+    .contato-links {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .contato-links p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .contato-links a {
+        display: inline-flex;
+        margin: 8px 6px;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
 }
 
-.course-card {
-    padding: 15px;
-}
-
-#faq {
-    padding: 30px 16px;
-}
-
-#faq h2 {
-    font-size: 1.75rem;
-}
-
-#faq details {
-    padding: 16px;
-}
-
-#faq summary {
-    font-size: 1rem;
-    padding-right: 16px;
-}
-
-#faq summary::after {
-    font-size: 1rem;
-}
-
-#faq p {
-    font-size: 0.95rem;
-}
-
-.contato-links {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .contato-links p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-
-  .contato-links a {
-    display: inline-flex;
-    margin: 8px 6px;
-    padding: 10px 14px;
-    font-size: 0.95rem;
-  }
 
 /* Telas até 1200px (tablet e notebooks médios) */
 @media (max-width: 1200px) {
@@ -173,61 +214,58 @@
         max-width: 700px;
     }
 
-    @media screen and (min-width: 1400px) {
-        /* FAQ */
-        #faq {
-          padding: 60px 80px;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-      
-        #faq h2 {
-          font-size: 2.2rem;
-        }
-      
-        #faq summary {
-          font-size: 1.2rem;
-        }
-      
-        #faq p {
-          font-size: 1.05rem;
-        }
-      
-        /* Sobre */
-        #sobre {
-          padding: 60px 80px;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-      
-        #sobre h2 {
-          font-size: 2.2rem;
-        }
-      
-        #sobre p {
-          font-size: 1.3rem;
-        }
-      
-        #sobre img {
-          height: 340px;
-        }
-      
-        /* Contato */
-        .contato-links {
-          margin-top: 30px;
-        }
-      
-        .contato-links a {
-          font-size: 1.1rem;
-          padding: 12px 24px;
-          margin: 8px 16px;
-        }
-      
-        .contato-links p {
-          font-size: 1.1rem;
-        }
-      }
-      
+    /* FAQ */
+    #faq {
+        padding: 60px 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #faq h2 {
+        font-size: 2.2rem;
+    }
+
+    #faq summary {
+        font-size: 1.2rem;
+    }
+
+    #faq p {
+        font-size: 1.05rem;
+    }
+
+    /* Sobre */
+    #sobre {
+        padding: 60px 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #sobre h2 {
+        font-size: 2.2rem;
+    }
+
+    #sobre p {
+        font-size: 1.3rem;
+    }
+
+    #sobre img {
+        height: 340px;
+    }
+
+    /* Contato */
+    .contato-links {
+        margin-top: 30px;
+    }
+
+    .contato-links a {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+        margin: 8px 16px;
+    }
+
+    .contato-links p {
+        font-size: 1.1rem;
+    }
 
     .course-card {
         font-size: 1.1rem;

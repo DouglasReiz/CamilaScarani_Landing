@@ -146,12 +146,90 @@ section .profile-card p span {
 }
 
 /* Cards de curso */
-.course-card {
+
+#cursos {
+  padding: 40px;
+}
+
+.container-course{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container-course .course-card {
   background-color: var(--verde);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  margin: 20px 0;
+  padding: 24px;
+  margin: 24px 0;
+  max-width: 40%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-course .course-card .course-img{
+  display: flex;
+  margin: 1rem;
+
+}
+
+.container-course .course-card .course-img img{
+  border-radius: 12px;
+  margin-top: 20px;
+  max-width: 100%;
+  height: 300px;
+}
+
+.container-course .course-card h3 {
+  font-size: 2.5rem;
+}
+
+.container-course .course-card .resumo {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: var(--branco);
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.conteudo-completo {
+  display: none;
+  margin-top: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--preto);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  max-height: 200px; /* Altura máxima visível */
+  overflow-y: auto;  /* Scroll vertical */
+}
+
+.conteudo-completo span{
+  font-weight: 700;
+}
+
+/* Estilo da barra de rolagem */
+.conteudo-completo::-webkit-scrollbar {
+  width: 8px;
+}
+
+.conteudo-completo::-webkit-scrollbar-track {
+  background: var(--verde);
+  border-radius: 8px;
+}
+
+.conteudo-completo::-webkit-scrollbar-thumb {
+  background-color: var(--cinza-claro);
+  border-radius: 8px;
+  border: 2px solid var(--preto);
 }
 
 
@@ -167,7 +245,7 @@ section .profile-card p span {
   font-size: 2rem;
   margin-bottom: 24px;
   text-align: center;
-  color: var(--cinza-escuro);
+  color: var(--preto);
 }
 
 #faq details {
@@ -207,7 +285,7 @@ section .profile-card p span {
 
 #faq p {
   margin-top: 10px;
-  color: var(--cinza-escuro);
+  color: var(--preto);
   font-size: 1rem;
 }
 

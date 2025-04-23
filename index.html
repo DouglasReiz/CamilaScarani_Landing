@@ -59,14 +59,90 @@
 
   <!-- Cursos -->
   <section id="cursos">
-    <h2>Nossos Cursos</h2>
-    <div class="course-card">
-      <h3>Curso de Maquiagem Profissional</h3>
-      <p>Descrição curta do curso.</p>
-    </div>
-    <div class="course-card">
-      <h3>Auto Maquiagem</h3>
-      <p>Descrição curta do curso.</p>
+
+    <h2>Algumas Consultorias</h2>
+
+    <div class="container-course">
+
+      <div class="course-card">
+        <h3>Consultoria de Skincare Natural</h3>
+
+        <div class="course-img">
+          <img src="./assets/img/skin-care.jpg" alt="skin-care Products">
+        </div>
+
+
+        <p class="resumo">
+          O skincare caseiro é uma prática comum, mas envolve riscos quando baseado em receitas populares sem respaldo
+          científico. A seguir, apresento seis tópicos que desmistificam mitos e verdades sobre cuidados caseiros com a
+          pele.
+          <button class="toggle-btn">Leia mais</button>
+        </p>
+        <div class="conteudo-completo">
+          <p>
+            <span>1.Limão e bicarbonato clareiam a pele?</span><br>
+
+            Mito. Misturas com limão, bicarbonato de sódio e água oxigenada não clareiam a pele e podem causar
+            queimaduras
+            graves, manchas e dermatites. O limão, em contato com a luz solar, pode provocar fitofotodermatite,
+            resultando
+            em bolhas e cicatrizes.
+
+            <br><br>
+            <span>2. Esfoliar o rosto com café, açúcar ou sal grosso é seguro?</span><br>
+
+
+            Mito. Esses ingredientes têm partículas irregulares que podem causar microfissuras na pele, levando a
+            irritações, inflamações e até infecções. É preferível utilizar esfoliantes formulados especificamente para a
+            pele facial.
+
+            <br><br>
+            <span>3. Pepino nos olhos reduz olheiras?</span><br>
+
+
+            Verdade parcial. O pepino possui propriedades anti-inflamatórias e, quando aplicado gelado sobre os olhos,
+            pode reduzir temporariamente o inchaço e clarear a região. No entanto, o efeito é passageiro e não trata
+            causas profundas das olheiras.
+
+            <br><br>
+            <span>4. Óleo de coco é bom para hidratar a pele?</span><br>
+
+            Depende. O óleo de coco pode ser benéfico para peles secas, devido às suas propriedades hidratantes.
+            Contudo,
+            em peles oleosas ou acneicas, pode obstruir os poros e agravar a acne. É importante considerar o tipo de
+            pele
+            antes de utilizar.
+
+            <br><br>
+            <span>5. Máscaras de abacate ou mamão são eficazes?</span><br>
+
+            Verdade. Essas frutas contêm nutrientes que podem beneficiar a pele. Aplicadas como máscaras, podem
+            proporcionar hidratação e nutrição. No entanto, devem ser usadas com cautela e preferencialmente à noite,
+            para
+            evitar reações adversas ao sol.
+
+            <br><br>
+            <span>6. Receitas caseiras são sempre seguras?</span><br>
+
+            Mito. Muitas receitas caseiras carecem de respaldo científico e podem causar danos à pele, como irritações,
+            alergias e infecções. Além disso, a falta de conhecimento sobre o próprio tipo de pele pode levar ao uso
+            inadequado de ingredientes.
+
+            <br><br>
+            <span>Conclusão:</span> Embora algumas práticas caseiras possam oferecer benefícios temporários, é essencial
+            ter cautela e
+            buscar orientação profissional. O uso indiscriminado de receitas populares pode resultar em danos à pele.
+            Para
+            cuidados eficazes e seguros, recomenda-se consultar um profissinal e utilizar produtos com comprovação
+            científica e aprovação da Anvisa.
+          </p>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <h3>Auto Maquiagem</h3>
+        <p>Descrição curta do curso.</p>
+      </div>
     </div>
   </section>
 
@@ -144,25 +220,35 @@
     <p>&copy; 2025 - Todos os direitos reservados</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.getElementById('site-header');
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.nav-menu');
+      const btns = document.querySelectorAll(".toggle-btn");
+  
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+  
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('show');
+      });
+  
+      btns.forEach(btn => {
+        btn.addEventListener("click", function () {
+          const content = this.closest(".course-card").querySelector(".conteudo-completo");
+          content.style.display = content.style.display === "block" ? "none" : "block";
+          this.textContent = content.style.display === "block" ? "Ler menos" : "Leia mais";
+        });
+      });
+  
+    });
+  </script>
 </body>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.getElementById('site-header');
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
-
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-  });
-</script>
 
 </html>
