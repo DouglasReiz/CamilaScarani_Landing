@@ -2,289 +2,274 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Camila Scarani</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skincare - Camila</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="./assets/img/newIcon.png" type="image/png">
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <style>
+    body {
+      background-color: #f2f2d5;
+      font-family: 'Raleway', serif;
+    }
+  </style>
 </head>
 
-<body>
+<body class="text-gray-800">
 
-  <!-- Cabeçalho -->
-  <header id="site-header">
-    <div class="logo">
-      <img src="./assets/img/milaesthetica.png" alt="logo">
-    </div>
+  <!-- Header com Menu Hambúrguer -->
+  <header class="flex items-center justify-between px-4 py-4 border-b border-[#a06a3f] relative">
+    <!-- Botão do menu -->
+    <button id="menu-btn" class="flex flex-col justify-center space-y-[5px] w-8 h-8 focus:outline-none sm:hidden">
+      ☰
+    </button>
 
-    <!-- Botão do menu para telas pequenas -->
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <!-- Logo -->
+    <div class="ml-4 sm:ml-0 text-base font-light text-gray-600"><img src="./assets/img/milaesthetica.png" alt="Logo"
+        class="h-20"></div>
 
-    <!-- Menu de navegação -->
-    <nav class="nav-menu">
-      <a href="#cursos">Ver Consultorias</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#depoimentos">Depoimentos</a>
-      <a href="#contato">Contato</a>
+    <!-- Menu Desktop -->
+    <nav class="hidden sm:flex gap-6 text-sm font-light text-[#2d2d2d]">
+      <a href="#hero" class="hover:underline">HOME</a>
+      <a href="#" class="hover:underline">BLOG</a>
+      <a href="#faq" class="hover:underline">FAQ</a>
+      <a href="#cursos" class="hover:underline">CONSULTORIA</a>
     </nav>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobile-menu"
+      class="absolute top-full left-0 w-full bg-[#f2f2d5] px-6 py-4 shadow-md hidden sm:hidden z-50">
+      <nav class="flex flex-col gap-4 text-[#2d2d2d] font-light text-sm">
+        <a href="#" class="hover:underline">HOME</a>
+        <a href="#" class="hover:underline">BLOG</a>
+        <a href="#" class="hover:underline">CONSULTORIA</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Descubra sua melhor versão</h1>
-      <button><a href="#cursos">Ver Consultorias</a></button>
+  <!-- Hero -->
+  <section id="hero" class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 px-36 py-12 lg:py-20">
+    <div class="space-y-6 text-center lg:text-left">
+      <h1 class="text-3xl sm:text-4xl leading-snug font-light text-[#2d2d2d]">
+        Uma abordagem<br>personalizada<br>para o cuidado da pele
+      </h1>
+      <p class="text-lg text-[#2d2d2d]">
+        o autocuidado que respeita<br>sua individualidade
+      </p>
+    </div>
+    <div class="flex justify-center relative">
+      <div class="flex flex-col items-center sm:flex-row sm:space-x-4 lg:block lg:space-x-0">
+        <img src="./assets/img/tratamento-facial.png" alt="Tratamento facial"
+          class="w-64 rounded shadow-md mb-4 lg:absolute lg:top-0 lg:right-0 lg:w-72">
+        <img src="./assets/img/rolinho-facial.png" alt="Rolinho facial"
+          class="w-64 rounded shadow-md relative z-10 lg:mt-40 lg:ml-20 lg:w-72">
+      </div>
     </div>
   </section>
 
-  <!-- Sobre -->
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <div class="profile-card">
-      <img src="./assets/img/Camila_Scarani.jpg" alt="Camila_Scarani" class="profile-image">
-
-      <p>Olá! Eu sou <span>Camila </span>, esteticista e cosmetóloga . Apaixonada por skincare, natureza e por tudo que
-        envolve o cuidado com o corpo e a mente. Após anos atuando na carreira administrativa, decidi seguir o que
+  <!-- Sobre Mim -->
+  <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-36 py-12 lg:py-20">
+    <div>
+      <h2 class="text-2xl sm:text-3xl mb-2 text-[#2d2d2d] uppercase tracking-widest text-center md:text-left">
+        Sobre Mim</h2>
+      <hr class="border-t border-[#2d2d2d] mb-4 w-32 md:w-40 mx-auto md:mx-0">
+      <p class="leading-relaxed text-[#2d2d2d] text-center md:text-left">
+      <p>Olá! Eu sou <span>Camila </span>, esteticista e cosmetóloga . Apaixonada por skincare, natureza e por
+        tudo que
+        envolve o cuidado com o corpo e a mente. Após anos atuando na carreira administrativa, decidi seguir o
+        que
         realmente me entusiasma: o cuidado com a pele e a estética. Essa transição foi guiada pelo desejo de
-        proporcionar mais confiança e bem-estar às pessoas, cuidando daquilo que mais pode refletir nossa saúde e
+        proporcionar mais confiança e bem-estar às pessoas, cuidando daquilo que mais pode refletir nossa saúde
+        e
         autoestima: a pele.</p>
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <img src="./assets/img/Camila_Scarani.jpg" alt="Camila" class="rounded-lg shadow-md w-72">
     </div>
   </section>
 
-  <br>
-
-  <section id="sobre">
-    <h2>Meu trabalho</h2>
-    <div class="profile-card">
-      <p>Hoje, meu foco principal é ajudar cada pessoa a descobrir o potencial da sua pele através de tratamentos
+  <!-- Sobre o Trabalho -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 px-36 py-12 lg:py-20">
+    <div class="flex flex-col items-center">
+      <img src="./assets/img/Procedimento-1.png" alt="Procedimento 1" class="rounded-lg shadow-md w-72 mb-6">
+      <img src="./assets/img/procedimento-2.png" alt="Procedimento 2" class="rounded-lg shadow-md w-72">
+    </div>
+    <div>
+      <h2 class="text-2xl sm:text-3xl mb-2 font-cinzel text-[#2d2d2d] uppercase tracking-widest text-center md:text-left">
+        Sobre Meu Trabalho</h2>
+      <hr class="border-t border-[#2d2d2d] mb-4 w-48 mx-auto md:mx-0">
+      <p class="leading-relaxed text-[#2d2d2d] text-center md:text-left">
+        Hoje, meu foco principal é ajudar cada pessoa a descobrir o potencial da sua pele através de tratamentos
         personalizados como a limpeza de pele confortável, o microagulhamento e da consultoria em skincare para
-        valorização da beleza e da conexão consigo mesmo. Minha missão é ajudar você a se sentir mais confiante e
+        valorização da beleza e da conexão consigo mesmo. Minha missão é ajudar você a se sentir mais confiante
+        e
         confortável na sua própria pele e a transformar sua rotina de skincare com segurança, conhecimento e
-        acessibilidade.</p>
+        acessibilidade.
+      </p>
     </div>
   </section>
 
   <!-- Cursos -->
-  <section id="cursos">
+  <section id="cursos" class="px-4 py-12">
+    <h2 class="text-2xl font-semibold text-center mb-8">Algumas Consultorias</h2>
 
-    <h2>Algumas Consultorias</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-4">Mitos e verdades sobre skincare caseiro.</h3>
 
-    <div class="container-course">
-
-      <div class="course-card">
-        <h3>Mitos e verdades sobre skincare caseiro.</h3>
-
-        <div class="course-img">
-          <img src="./assets/img/skin-carev2.jpg" alt="skin-care Products">
+        <div class="mb-4">
+          <img src="./assets/img/skin-carev2.jpg" alt="skin-care Products" class="w-full h-auto rounded">
         </div>
 
-
-        <p class="resumo">
-          O skincare caseiro é uma prática comum, mas envolve riscos quando baseado em receitas populares sem respaldo
-          científico. A seguir, apresento seis tópicos que desmistificam mitos e verdades sobre cuidados caseiros com a
+        <p class="mb-4">
+          O skincare caseiro é uma prática comum, mas envolve riscos quando baseado em receitas populares sem
+          respaldo
+          científico. A seguir, apresento seis tópicos que desmistificam mitos e verdades sobre cuidados
+          caseiros com a
           pele.
-          <button class="toggle-btn">Leia mais</button>
         </p>
-        <div class="conteudo-completo">
+        <button class="toggle-btn text-black-600">Leia mais</button>
+
+        <div class="conteudo-completo hidden mt-4 text-sm leading-relaxed">
           <p>
-            <span>1.Limão e bicarbonato clareiam a pele?</span><br>
+            <span class="font-semibold">1. Limão e bicarbonato clareiam a pele?</span><br>
+            Mito. Misturas com limão, bicarbonato de sódio e água oxigenada não clareiam a pele e podem
+            causar
+            queimaduras graves, manchas e dermatites...<br><br>
 
-            Mito. Misturas com limão, bicarbonato de sódio e água oxigenada não clareiam a pele e podem causar
-            queimaduras
-            graves, manchas e dermatites. O limão, em contato com a luz solar, pode provocar fitofotodermatite,
-            resultando
-            em bolhas e cicatrizes.
+            <span class="font-semibold">2. Esfoliar o rosto com café, açúcar ou sal grosso é
+              seguro?</span><br>
+            Mito. Esses ingredientes têm partículas irregulares...<br><br>
 
-            <br><br>
-            <span>2. Esfoliar o rosto com café, açúcar ou sal grosso é seguro?</span><br>
+            <span class="font-semibold">3. Pepino nos olhos reduz olheiras?</span><br>
+            Verdade parcial. O pepino possui propriedades anti-inflamatórias...<br><br>
 
+            <span class="font-semibold">4. Óleo de coco é bom para hidratar a pele?</span><br>
+            Depende. O óleo de coco pode ser benéfico para peles secas...<br><br>
 
-            Mito. Esses ingredientes têm partículas irregulares que podem causar microfissuras na pele, levando a
-            irritações, inflamações e até infecções. É preferível utilizar esfoliantes formulados especificamente para a
-            pele facial.
+            <span class="font-semibold">5. Máscaras de abacate ou mamão são eficazes?</span><br>
+            Verdade. Essas frutas contêm nutrientes...<br><br>
 
-            <br><br>
-            <span>3. Pepino nos olhos reduz olheiras?</span><br>
+            <span class="font-semibold">6. Receitas caseiras são sempre seguras?</span><br>
+            Mito. Muitas receitas caseiras carecem de respaldo científico...<br><br>
 
-
-            Verdade parcial. O pepino possui propriedades anti-inflamatórias e, quando aplicado gelado sobre os olhos,
-            pode reduzir temporariamente o inchaço e clarear a região. No entanto, o efeito é passageiro e não trata
-            causas profundas das olheiras.
-
-            <br><br>
-            <span>4. Óleo de coco é bom para hidratar a pele?</span><br>
-
-            Depende. O óleo de coco pode ser benéfico para peles secas, devido às suas propriedades hidratantes.
-            Contudo,
-            em peles oleosas ou acneicas, pode obstruir os poros e agravar a acne. É importante considerar o tipo de
-            pele
-            antes de utilizar.
-
-            <br><br>
-            <span>5. Máscaras de abacate ou mamão são eficazes?</span><br>
-
-            Verdade. Essas frutas contêm nutrientes que podem beneficiar a pele. Aplicadas como máscaras, podem
-            proporcionar hidratação e nutrição. No entanto, devem ser usadas com cautela e preferencialmente à noite,
-            para
-            evitar reações adversas ao sol.
-
-            <br><br>
-            <span>6. Receitas caseiras são sempre seguras?</span><br>
-
-            Mito. Muitas receitas caseiras carecem de respaldo científico e podem causar danos à pele, como irritações,
-            alergias e infecções. Além disso, a falta de conhecimento sobre o próprio tipo de pele pode levar ao uso
-            inadequado de ingredientes.
-
-            <br><br>
-            <span>Conclusão:</span> Embora algumas práticas caseiras possam oferecer benefícios temporários, é essencial
-            ter cautela e
-            buscar orientação profissional. O uso indiscriminado de receitas populares pode resultar em danos à pele.
-            Para
-            cuidados eficazes e seguros, recomenda-se consultar um profissinal e utilizar produtos com comprovação
-            científica e aprovação da Anvisa.
+            <span class="font-semibold">Conclusão:</span> Embora algumas práticas caseiras possam oferecer
+            benefícios temporários,
+            é essencial ter cautela e buscar orientação profissional.
           </p>
         </div>
       </div>
-
-
-      <!-- <div class="course-card">
-        <h3>Auto Maquiagem</h3>
-
-        <div class="course-img">
-          <img src="" alt="Imagem ilustrativa">
-        </div>
-
-        <p class="resumo">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum expedita vero harum libero nemo nulla excepturi dolorum distinctio velit ea? Corporis, consequuntur. Neque expedita soluta veritatis consequuntur explicabo veniam dolore.
-          <button class="toggle-btn">Leia mais</button>
-        </p>
-        <div class="conteudo-completo">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus harum saepe unde cum animi? Cupiditate maiores alias dicta dolorem officia reiciendis, similique quia eveniet deleniti nulla beatae fuga, modi assumenda.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, alias porro neque impedit explicabo assumenda deleniti aliquam, eveniet repellendus voluptas ut quae voluptatibus! Nostrum sed numquam, sequi eligendi atque enim!
-          </p>
-        </div>
-      </div> -->
-
+    </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq">
-    <h2>Tire suas Dúvidas sobre a Consultoria Online de Skincare</h2>
-
-    <details>
-      <summary>1. Como funciona a consultoria?</summary>
-      <p>A consultoria é 100% personalizada. Pode ser realizada por videochamada ou, em alguns casos, por gravação
-        enviada exclusivamente para você. Após uma anamnese completa, você recebe orientações detalhadas para cuidar da
-        sua pele com segurança e praticidade.</p>
-    </details>
-
-    <details>
-      <summary>2. Qual é o objetivo da consultoria?</summary>
-      <p>Te ajudar a escolher os cosméticos certos para melhorar a qualidade da sua pele.</p>
-    </details>
-
-    <details>
-      <summary>3. Para quem a consultoria é indicada?</summary>
-      <p>Para qualquer pessoa que deseja montar ou ajustar sua rotina de skincare de forma realista, acessível e eficaz
-        — mesmo sem ter muitos produtos em casa.</p>
-    </details>
-
-    <details>
-      <summary>4. Você indica produtos durante a consultoria?</summary>
-      <p>Sim! Posso recomendar dermocosméticos, produtos de farmácia ou opções naturais, sempre respeitando seu tipo de
-        pele, sua rotina e seu orçamento.</p>
-    </details>
-
-    <details>
-      <summary>5. Preciso comprar muitos produtos para começar?</summary>
-      <p>Não! O foco é adaptar a rotina com o que você já tem ou indicar o essencial, sem exageros.</p>
-    </details>
-
-    <details>
-      <summary>6. Existe acompanhamento após a sessão?</summary>
-      <p>Sim! Você terá acompanhamento por até 2 meses, com suporte para tirar dúvidas e ajustar o protocolo se
-        necessário.</p>
-    </details>
-
-    <details>
-      <summary>7. Há alguma contraindicação?</summary>
-      <p>Sim. A consultoria não é indicada para pessoas em tratamento de câncer de pele ou com condições que exigem
-        acompanhamento médico.</p>
-    </details>
-
-    <details>
-      <summary>8. Quais são as formas de pagamento?</summary>
-      <p>Você pode pagar via Pix ou cartão de crédito (link seguro de pagamento).</p>
-    </details>
-
-    <details>
-      <summary>9. Como é feita a avaliação da pele?</summary>
-      <p>Durante a anamnese, vamos conversar sobre seu histórico, hábitos, produtos usados e também analisar imagens da
-        pele, se necessário.</p>
-    </details>
+  <section id="faq" class="px-4 py-12">
+    <h2 class="text-2xl font-semibold text-center mb-8">Tire suas Dúvidas sobre a Consultoria Online de Skincare
+    </h2>
+    <div class="max-w-4xl mx-auto space-y-4">
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">1. Como funciona a consultoria?</summary>
+        <p class="mt-2 text-sm">A consultoria é 100% personalizada...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">2. Qual é o objetivo da consultoria?</summary>
+        <p class="mt-2 text-sm">Te ajudar a escolher os cosméticos certos...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">3. Para quem a consultoria é indicada?</summary>
+        <p class="mt-2 text-sm">Para qualquer pessoa que deseja montar ou ajustar...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">4. Você indica produtos durante a consultoria?</summary>
+        <p class="mt-2 text-sm">Sim! Posso recomendar dermocosméticos...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">5. Preciso comprar muitos produtos para começar?</summary>
+        <p class="mt-2 text-sm">Não! O foco é adaptar a rotina com o que você já tem...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">6. Existe acompanhamento após a sessão?</summary>
+        <p class="mt-2 text-sm">Sim! Você terá acompanhamento por até 2 meses...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">7. Há alguma contraindicação?</summary>
+        <p class="mt-2 text-sm">Sim. A consultoria não é indicada para pessoas em tratamento de câncer...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">8. Quais são as formas de pagamento?</summary>
+        <p class="mt-2 text-sm">Você pode pagar via Pix ou cartão de crédito...</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="font-medium cursor-pointer">9. Como é feita a avaliação da pele?</summary>
+        <p class="mt-2 text-sm">Durante a anamnese, vamos conversar sobre seu histórico...</p>
+      </details>
+    </div>
   </section>
 
   <!-- Contato -->
-  <section id="contato">
-    <h2>Entre em Contato</h2>
-    <div class="contato-links">
-      <p>Fale comigo diretamente:</p>
-      <a href="https://wa.me/5521986544310" target="_blank" class="whatsapp"><img src="./assets/img/whatsapp-icon.svg"
-          alt=""> WhatsApp</a>
-      <a href="https://instagram.com/milaesthetica" target="_blank" class="instagram"><img
-          src="./assets/img/instagram-icon.svg" alt=""> Instagram</a>
+  <section id="contato" class="px-4 py-12">
+    <h2 class="text-2xl font-semibold text-center mb-4">Entre em Contato</h2>
+    <div class="text-center">
+      <p class="mb-4">Fale comigo diretamente:</p>
+      <div class="flex justify-center space-x-6">
+        <a href="https://wa.me/5521986544310" target="_blank"
+          class="flex items-center gap-2 text-green-600 hover:underline">
+          <img src="./assets/img/whatsapp-icon.svg" alt="WhatsApp" class="h-6"> WhatsApp
+        </a>
+        <a href="https://instagram.com/milaesthetica" target="_blank"
+          class="flex items-center gap-2 text-pink-500 hover:underline">
+          <img src="./assets/img/instagram-icon.svg" alt="Instagram" class="h-6"> Instagram
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Rodapé -->
-  <footer>
+  <footer class="bg-gray-300 text-center py-4 text-sm">
     <p>&copy; 2025 - Todos os direitos reservados</p>
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const header = document.getElementById('site-header');
-      const toggle = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('.nav-menu');
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
       const btns = document.querySelectorAll(".toggle-btn");
-
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 10) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
-
-      toggle.addEventListener('click', (e) => {
-        menu.classList.toggle('show');
-        e.stopPropagation();
-      });
-
-
-      document.addEventListener('click', function () {
-        menu.classList.remove('show');
-      });
 
       btns.forEach(btn => {
         btn.addEventListener("click", function () {
-          const content = this.closest(".course-card").querySelector(".conteudo-completo");
-          content.style.display = content.style.display === "block" ? "none" : "block";
-          this.textContent = content.style.display === "block" ? "Ler menos" : "Leia mais";
+          const content = this.nextElementSibling;
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            this.textContent = "Ler menos";
+          } else {
+            content.classList.add("hidden");
+            this.textContent = "Leia mais";
+          }
         });
       });
-
     });
+
   </script>
+
+
 </body>
 
 </html>
