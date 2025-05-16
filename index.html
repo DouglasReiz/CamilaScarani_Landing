@@ -20,16 +20,17 @@
 
   <style>
     body {
-      background-color: #f2f2d5;
       font-family: 'Raleway', serif;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 
-<body class="text-gray-800">
+<body class="text-green-800">
 
   <!-- Header com Menu Hambúrguer -->
-  <header class="flex items-center justify-between px-4 py-4 border-b border-[#a06a3f] relative">
+  <header class="flex items-center bg-amber-50 justify-between px-4 py-4 border-b border-[#a06a3f] relative">
     <!-- Botão do menu -->
     <button id="menu-btn" class="flex flex-col justify-center space-y-[5px] w-8 h-8 focus:outline-none sm:hidden">
       ☰
@@ -59,9 +60,9 @@
   </header>
 
   <!-- Hero -->
-  <section id="hero" class="bg-center bg-no-repeat bg-cover h-110 flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 px-36 py-12 lg:py-20" style="background-image: url('./assets/img/Background-hero.jpeg');">
-    <div class="space-y-6 text-center lg:text-left">
-      <h1 class="text-3xl sm:text-4xl leading-snug font-light text-[#2d2d2d]">
+  <section id="hero" class="bg-center bg-no-repeat bg-cover h-190 flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 px-36 py-12 lg:py-20" style="background-image: url('./assets/img/Background-hero.jpeg');">
+    <div class="space-y-6 text-center ">
+      <h1 class="text-xl font-medium lg:text-3xl text-center lg:text-left leading-snug font-light text-[#2d2d2d]">
         Uma abordagem<br>personalizada<br>para o cuidado da pele
       </h1>
       <p class="text-lg text-[#2d2d2d]">
@@ -73,26 +74,26 @@
         <img src="./assets/img/tratamento-facial.png" alt="Tratamento facial"
           class="w-64 rounded shadow-md mb-4 lg:absolute lg:top-0 lg:right-0 lg:w-72">
         <img src="./assets/img/rolinho-facial.png" alt="Rolinho facial"
-          class="w-64 rounded shadow-md relative z-10 lg:mt-40 lg:ml-20 lg:w-72">
+          class="w-64 rounded shadow-md relative z-10 lg:mt-55 lg:ml-20 lg:w-72">
       </div>
     </div>
   </section>
 
   <!-- Sobre Mim -->
-  <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-36 py-12 lg:py-20">
+  <section class="grid lg:grid-cols-1 md:grid-cols-2 items-center gap-10 px-16 lg:px-36 py-12 lg:py-20">
     <div>
       <h2 class="text-2xl sm:text-3xl mb-2 text-[#2d2d2d] uppercase tracking-widest text-center md:text-left">
         Sobre Mim</h2>
       <hr class="border-t border-[#2d2d2d] mb-4 w-32 md:w-40 mx-auto md:mx-0">
-      <p class="leading-relaxed text-[#2d2d2d] text-center md:text-left">
-      <p>Olá! Eu sou <span>Camila </span>, esteticista e cosmetóloga . Apaixonada por skincare, natureza e por
+      <p class="leading-relaxed text-[#2d2d2d] lg:text-center md:text-left">
+      Olá! Eu sou <span>Camila </span>, esteticista e cosmetóloga . Apaixonada por skincare, natureza e por
         tudo que
         envolve o cuidado com o corpo e a mente. Após anos atuando na carreira administrativa, decidi seguir o
         que
         realmente me entusiasma: o cuidado com a pele e a estética. Essa transição foi guiada pelo desejo de
         proporcionar mais confiança e bem-estar às pessoas, cuidando daquilo que mais pode refletir nossa saúde
         e
-        autoestima: a pele.</p>
+        autoestima: a pele.
       </p>
     </div>
     <div class="flex justify-center">
@@ -100,8 +101,11 @@
     </div>
   </section>
 
+  <hr class="border-t border-[#2d2d2d] mb-4 w-32 md:w-40 mx-auto md:mx-0">
+  <hr class="border-t border-[#2d2d2d] mb-4 w-32 md:w-40 mx-auto md:mx-0">
+
   <!-- Sobre o Trabalho -->
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 px-36 py-12 lg:py-20">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-10 px-16 lg:px-36 py-12 lg:py-20">
     <div class="flex flex-col items-center">
       <img src="./assets/img/Procedimento-1.png" alt="Procedimento 1" class="rounded-lg shadow-md w-72 mb-6">
       <img src="./assets/img/procedimento-2.png" alt="Procedimento 2" class="rounded-lg shadow-md w-72">
@@ -245,8 +249,18 @@
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
+
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideMenu = mobileMenu.contains(event.target);
+      const isClickOnToggle = menuBtn.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle) {
+        mobileMenu.classList.toggle('hidden');
+      }
     });
 
     document.addEventListener("DOMContentLoaded", function () {
