@@ -30,40 +30,41 @@
 <body class="text-green-800">
 
   <!-- Header com Menu Hambúrguer -->
-  <header class="flex items-center bg-amber-50 justify-between px-4 py-4 border-b border-[#a06a3f] relative">
-    <!-- Botão do menu -->
-    <button id="menu-btn" class="flex flex-col justify-center space-y-[5px] w-8 h-8 focus:outline-none sm:hidden">
-      ☰
-    </button>
+  <header id="main-header" class="fixed w-full top-0 left-0 z-50 transition-colors duration-300 bg-transparent">
+    <div class="flex items-center justify-between px-4 py-4">
+      <!-- Botão do menu -->
+      <button id="menu-btn" class="flex flex-col justify-center space-y-[5px] w-8 h-8 focus:outline-none sm:hidden">
+        ☰
+      </button>
 
-    <!-- Logo -->
-    <div class="ml-4 sm:ml-0 text-base font-light text-gray-600"><img src="./assets/img/milaesthetica.png" alt="Logo"
-        class="h-20"></div>
+      <!-- Logo -->
+      <div class="ml-4 sm:ml-0 text-base font-light text-gray-600"><img src="./assets/img/milaesthetica.png" alt="Logo"
+          class="h-20"></div>
 
-    <!-- Menu Desktop -->
-    <nav class="hidden sm:flex gap-6 text-sm font-light text-[#2d2d2d]">
-      <a href="#hero" class="hover:underline">HOME</a>
-      <a href="#" class="hover:underline">BLOG</a>
-      <a href="#faq" class="hover:underline">FAQ</a>
-      <a href="#cursos" class="hover:underline">CONSULTORIA</a>
-    </nav>
-
-    <!-- Dropdown Mobile -->
-    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-amber-50 px-6 py-4 shadow-md hidden sm:hidden z-50">
-      <nav class="flex flex-col gap-4 text-[#2d2d2d] font-light text-sm">
+      <!-- Menu Desktop -->
+      <nav class="hidden sm:flex gap-6 text-sm font-light text-[#2d2d2d]">
         <a href="#hero" class="hover:underline">HOME</a>
         <a href="#" class="hover:underline">BLOG</a>
         <a href="#faq" class="hover:underline">FAQ</a>
         <a href="#cursos" class="hover:underline">CONSULTORIA</a>
       </nav>
+
+      <!-- Dropdown Mobile -->
+      <div id="mobile-menu"
+        class="absolute top-full left-0 w-full bg-amber-50 px-6 py-4 shadow-md hidden sm:hidden z-50">
+        <nav class="flex flex-col gap-4 text-[#2d2d2d] font-light text-sm">
+          <a href="#hero" class="hover:underline">HOME</a>
+          <a href="#" class="hover:underline">BLOG</a>
+          <a href="#faq" class="hover:underline">FAQ</a>
+          <a href="#cursos" class="hover:underline">CONSULTORIA</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="hero"
-    class="bg-center bg-no-repeat bg-cover h-190 flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 px-36 py-12 lg:py-20"
-    style="background-image: url('./assets/img/Background-hero.jpeg');">
-    <div class="space-y-6 text-center ">
+  <section id="hero" class="bg-center bg-no-repeat bg-cover h-190 flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 px-36 py-12 lg:py-40" style="background-image: url('./assets/img/Background-hero.jpeg');">
+    <div class="space-y-8 text-center ">
       <h1 class="text-xl font-medium lg:text-3xl text-center lg:text-left leading-snug font-light text-[#2d2d2d]">
         Uma abordagem<br>personalizada<br>para o cuidado da pele
       </h1>
@@ -281,6 +282,17 @@
           }
         });
       });
+    });
+
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) {
+        header.classList.remove('bg-transparent');
+        header.classList.add('bg-amber-50', 'shadow-md');
+      } else {
+        header.classList.remove('bg-amber-50', 'shadow-md');
+        header.classList.add('bg-transparent');
+      }
     });
 
   </script>
